@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <title>computation-time 示例</title>
+  <link rel="stylesheet" href="http://n2.static.pg0.cn/www/common/base/css/base.css"></link>
+</head>
+
+<body>
+  <div id="computation-time-container" class="computation-time-container">
+	  <div class="time" data-time="2018-05-05 09:20:10"></div>
+	  <div class="time1" data-time="2018-05-06 09:20:10"></div>
+	  <div class="time2" data-time="2018-06-01 09:20:10"></div>
+  <script src="http://n3.static.pg0.cn/fp/jquery/dist/jquery-1.9.1.js"></script>
+  <script src="../dist/computation-time.js"></script>
+  <script>
+		ComputationTime.chineseDate("2018-05-31 18:51:00");
+	ComputationTime.init($(".time"),"data-time");
+	ComputationTime.chineseDateDiff($(".time1"),"data-time");
+	ComputationTime.englishDateDiff($(".time2"),"data-time");
+	console.info("jsDateDiff:" + ComputationTime.jsDateDiff("2018-05-05 09:20:10"));
+	console.info("transSeconds:" + ComputationTime.transSeconds("90"));
+	console.info("addOneSeconds:" + ComputationTime.addOneSeconds("2018-05-05 09:20:10"));
+	console.info("reduceOneSeconds:" + ComputationTime.reduceOneSeconds("2018-05-05 09:20:10"));
+	console.info("englishDate:" + ComputationTime.englishDate("2018-05-05 09:20:10"));
+	console.info("englishDate:" + ComputationTime.englishDate("2018-06-04 12:00:00"));
+	console.info("englishDate:" + ComputationTime.englishDate("2018-06-04 16:50:00"));
+
+	console.info("chineseDate:" + ComputationTime.chineseDate("2018-05-05 09:20:10"));
+	console.info("chineseDate:" + ComputationTime.chineseDate("2018-05-31 12:00:00"));
+	console.info("chineseDate:" + ComputationTime.chineseDate("2018-05-31 18:51:00"));
+	console.info("-------------------------------------");
+	console.info("currentTimeStamp:" + ComputationTime.timestamp("2018-06-20 17:20:28"));
+	console.info("currentTime:" + ComputationTime.currentTime())
+
+
+    // 组件调用代码
+  </script>
+</body>
+
+</html>
